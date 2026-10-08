@@ -35,14 +35,14 @@
 /* DISPLAY */
 
 .Display {
-  height: 85px;
+  min-height: 85px;
   margin-bottom: 20px;
 
   display: flex;
   align-items: center;
   justify-content: flex-end;
 
-  padding: 0 18px;
+  padding: 8px 18px;
   box-sizing: border-box;
 
   background: #263238;
@@ -50,14 +50,14 @@
   border-radius: 12px;
 
   color: #ffffff;
-  font-size: 40px;
+  font-size: 32px;
   font-weight: bold;
+  text-align: right;
 
   overflow: hidden;
-  white-space: nowrap;
+  word-break: break-word;
 
-  box-shadow:
-    inset 0 3px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.5);
 }
 
 /* KEYPAD */
@@ -136,31 +136,23 @@
   background: #12bce9;
 }
 
-/* NAME TAG */
+/* SURNAME BUTTON */
 
-.NameTag {
-  margin-top: 20px;
-
-  height: 55px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: #312023;
-  border: 2px solid #140e0f;
-  border-radius: 10px;
-
+.Surname {
+  grid-column: 1 / -1;
+  background: #7d0b1c;
   color: white;
-  font-size: 20px;
-  font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  box-shadow: 0 4px 0 #4a0610;
+}
+
+.Surname:hover {
+  background: #a01227;
 }
 
 /* MOBILE */
 
 @media (max-width: 600px) {
-
   .Calculator {
     width: 90%;
     max-width: 430px;
@@ -169,5 +161,4 @@
   .Header {
     font-size: 20px;
   }
-
 }
