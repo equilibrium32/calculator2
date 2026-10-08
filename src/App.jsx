@@ -23,7 +23,6 @@ function App() {
   const [waitingForSecondNumber, setWaitingForSecondNumber] = useState(false);
 
   const buttonClickHandler = (value) => {
-    // CLEAR
     if (value === 'CLR') {
       setDisplay('0');
       setFirstNumber(null);
@@ -32,16 +31,14 @@ function App() {
       return;
     }
 
-    // SURNAME -> show full name
-    if (value === 'MANCO') {
+    if (value === 'MANCO CHARL ADRIAN F.') {
       setDisplay('Charl Adrian Manco');
       setFirstNumber(null);
       setOperator(null);
-      setWaitingForSecondNumber(true); // next digit replaces the name
+      setWaitingForSecondNumber(true);
       return;
     }
 
-    // NUMBERS
     if (!isNaN(value)) {
       if (display === '0' || waitingForSecondNumber) {
         setDisplay(String(value));
@@ -52,16 +49,15 @@ function App() {
       return;
     }
 
-    // OPERATORS
     if (['+', '-', 'x', '÷'].includes(value)) {
-      if (isNaN(Number(display))) return; // ignore if showing name/Error
+      if (isNaN(Number(display))) return;
+
       setFirstNumber(Number(display));
       setOperator(value);
       setWaitingForSecondNumber(true);
       return;
     }
 
-    // EQUALS
     if (value === '=') {
       if (firstNumber === null || operator === null) return;
 
@@ -130,7 +126,11 @@ function App() {
           <CalcButton buttonLabel="=" onClick={buttonClickHandler} className="Equals" />
           <CalcButton buttonLabel="+" onClick={buttonClickHandler} className="Operator" />
 
-          <CalcButton buttonLabel="MANCO CHARL ADRIAN F." onClick={buttonClickHandler} className="Surname" />
+          <CalcButton
+            buttonLabel="MANCO CHARL ADRIAN F."
+            onClick={buttonClickHandler}
+            className="Surname"
+          />
         </div>
       </div>
     </div>

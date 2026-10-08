@@ -6,16 +6,12 @@
   box-sizing: border-box;
 }
 
-/* HEADER */
-
 .Header {
   font-size: 28px;
   font-weight: bold;
   color: #1f1f1f;
   margin-bottom: 25px;
 }
-
-/* CALCULATOR BODY */
 
 .Calculator {
   width: 430px;
@@ -31,8 +27,6 @@
     0 10px 20px rgba(0, 0, 0, 0.25),
     inset 0 0 10px rgba(255, 255, 255, 0.12);
 }
-
-/* DISPLAY */
 
 .Display {
   min-height: 85px;
@@ -50,7 +44,7 @@
   border-radius: 12px;
 
   color: #ffffff;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: bold;
   text-align: right;
 
@@ -60,15 +54,11 @@
   box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* KEYPAD */
-
 .Keypad {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
-
-/* BUTTONS */
 
 .Button {
   height: 70px;
@@ -100,8 +90,6 @@
   box-shadow: 0 0 0 #a7a7a7;
 }
 
-/* OPERATORS */
-
 .Operator {
   background: #281f3a;
   color: white;
@@ -111,8 +99,6 @@
 .Operator:hover {
   background: #5a5466;
 }
-
-/* CLEAR */
 
 .Clear {
   background: #979191;
@@ -124,8 +110,6 @@
   background: #635556;
 }
 
-/* EQUALS */
-
 .Equals {
   background: #00a6d6;
   color: white;
@@ -135,8 +119,6 @@
 .Equals:hover {
   background: #12bce9;
 }
-
-/* SURNAME BUTTON */
 
 .Surname {
   grid-column: 1 / -1;
@@ -149,8 +131,6 @@
 .Surname:hover {
   background: #a01227;
 }
-
-/* MOBILE */
 
 @media (max-width: 600px) {
   .Calculator {
